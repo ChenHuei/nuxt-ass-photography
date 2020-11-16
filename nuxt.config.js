@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
@@ -36,6 +38,7 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     '@nuxtjs/style-resources',
+    '@nuxtjs/firebase',
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
@@ -50,5 +53,23 @@ export default {
   },
   stylelint: {
     fix: true,
+  },
+  firebase: {
+    config: {
+      apiKey: process.env.FIREBASE_API_LEY,
+      authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+      databaseURL: process.env.FIREBASE_DATABASE_URL,
+      projectId: process.env.FIREBASE_PROJECT_ID,
+      storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+      messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
+      appId: process.env.FIREBASE_APP_ID,
+      measurementId: process.env.FIREBASE_MEASUREMENT_ID,
+    },
+    services: {
+      auth: true,
+      firestore: true,
+      storage: true,
+      realtimeDb: true,
+    },
   },
 }
