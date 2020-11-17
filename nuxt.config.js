@@ -39,6 +39,7 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/style-resources',
     '@nuxtjs/firebase',
+    'nuxt-lazy-load',
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
