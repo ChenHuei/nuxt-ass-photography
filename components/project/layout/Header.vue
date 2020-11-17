@@ -1,25 +1,29 @@
 <template>
-  <nav class="layout-header">
-    <div class="layout-header-title">ASS PHOTOGRAPHY</div>
-    <div class="layout-header-icons">
-      <a
-        v-for="icon in iconList"
-        :key="icon.link"
-        :href="icon.link"
-        class="layout-header-icons-item"
-        rel="noopener"
-        target="_blank"
-      >
-        <font-awesome-icon :icon="iconClassHandler(icon.icon)" />
-      </a>
-    </div>
-    <div class="layout-header-links">
-      <nuxt-link
-        v-for="link in linkList"
-        :key="link.route"
-        :to="link.route"
-        :class="activeClassHandler(link.route)"
-      />
+  <nav class="layout-header-wrapper">
+    <div class="layout-header-container">
+      <div class="layout-header">
+        <div class="layout-header-title">ASS PHOTOGRAPHY</div>
+        <div class="layout-header-icons">
+          <a
+            v-for="icon in iconList"
+            :key="icon.link"
+            :href="icon.link"
+            class="layout-header-icons-item"
+            rel="noopener"
+            target="_blank"
+          >
+            <font-awesome-icon :icon="iconClassHandler(icon.icon)" />
+          </a>
+        </div>
+        <div class="layout-header-links">
+          <nuxt-link
+            v-for="link in linkList"
+            :key="link.route"
+            :to="link.route"
+            :class="activeClassHandler(link.route)"
+          />
+        </div>
+      </div>
     </div>
   </nav>
 </template>
@@ -59,7 +63,9 @@ export default class LayoutHeader extends Vue {
 <style lang="scss" scoped>
 .layout-header {
   @include size(100%, auto);
+  @include display-flex();
 
+  flex-direction: column;
   padding: 48px 32px 32px;
 }
 </style>
