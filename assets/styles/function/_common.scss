@@ -1,10 +1,10 @@
-@function rem($pixels, $base: $body-font-size) {
-  @return $pixels / $base * 1rem;
-}
-
 @mixin font($font-size, $font-weight: 400) {
   font-size: rem($font-size);
   font-weight: $font-weight;
+}
+
+@function rem($pixels, $base: $body-font-size) {
+  @return $pixels / $base * 1rem;
 }
 
 @function z-index($name: normal) {

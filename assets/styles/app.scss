@@ -7,17 +7,8 @@
 @import 'reboot';
 
 :root {
-  --primary-light: #f5f6f8;
-  --primary: #066ddc;
-  --primary-hover: #33496c;
-  --grey-light: #f2f2f3;
-  --grey: #e4e7ed;
-  --grey-dark: #737b7d;
+  --primary: #89a3b2;
   --white: #fff;
-  --black: #373f41;
-  --error: #f05343;
-  --success: #3f916a;
-  --warning: #f2c16e;
   --mask: rgba(0, 0, 0, 0.3);
   --scrollbar: #98a4b5;
 }
@@ -35,25 +26,4 @@
   @include RWD-above() {
     max-width: $laptop;
   }
-}
-
-// element component
-
-.global-message {
-  .el-message {
-    &__content,
-    &__icon {
-      color: var(--white);
-    }
-  }
-
-  top: 50% !important;
-  min-width: auto;
-  background-color: var(--black);
-}
-
-// global
-
-html {
-  background-color: var(--grey-light);
 }
