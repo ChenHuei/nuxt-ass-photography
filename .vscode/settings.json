@@ -19,6 +19,8 @@
   "vetur.validation.template": false,
   "git.confirmSync": false,
   "cSpell.words": [
-    "firestore"
+    "firestore",
+    "fontawesome",
+    "fortawesome"
   ],
 }

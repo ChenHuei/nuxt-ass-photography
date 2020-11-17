@@ -20,7 +20,7 @@ export default {
   ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: ['@/plugins/element-ui'],
+  plugins: ['@/plugins/element-ui', '@/plugins/font-awesome-icon'],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
@@ -40,6 +40,7 @@ export default {
     '@nuxtjs/style-resources',
     '@nuxtjs/firebase',
     'nuxt-lazy-load',
+    'nuxt-fontawesome',
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
@@ -72,5 +73,21 @@ export default {
       storage: true,
       realtimeDb: true,
     },
+  },
+  fontawesome: {
+    imports: [
+      {
+        icons: ['fas'],
+        set: '@fortawesome/free-solid-svg-icons',
+      },
+      {
+        icons: ['far'],
+        set: '@fortawesome/free-regular-svg-icons',
+      },
+      {
+        icons: ['fab'],
+        set: '@fortawesome/free-brands-svg-icons',
+      },
+    ],
   },
 }

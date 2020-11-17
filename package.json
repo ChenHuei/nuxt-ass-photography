@@ -13,6 +13,9 @@
     "test": "jest"
   },
   "dependencies": {
+    "@fortawesome/free-brands-svg-icons": "^5.15.1",
+    "@fortawesome/free-regular-svg-icons": "^5.15.1",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@nuxt/typescript-runtime": "^2.0.0",
     "@nuxtjs/axios": "^5.12.2",
     "@nuxtjs/dotenv": "^1.4.1",
@@ -23,6 +26,7 @@
     "firebase": "^8.0.2",
     "normalize.css": "^8.0.1",
     "nuxt": "^2.14.6",
+    "nuxt-fontawesome": "^0.4.0",
     "nuxt-lazy-load": "^1.2.4",
     "stylelint-scss": "^3.18.0",
     "vue-class-component": "^7.2.6",
