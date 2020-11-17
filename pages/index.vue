@@ -1,12 +1,12 @@
 <template>
-  <div>index</div>
+  <div class="home">home</div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
 
 @Component
-export default class IndexPage extends Vue {
+export default class HomePage extends Vue {
   mounted() {
     this.$fire.firestore
       .collection('album')
